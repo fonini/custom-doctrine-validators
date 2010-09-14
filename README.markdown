@@ -11,7 +11,7 @@ A pack with some custom Doctrine validators, that helps with common validation t
 
   * Download the package
 
-        http://www.fonini.net/labs/custom-doctrine-validators.zip
+        [http://github.com/fonini/custom-doctrine-validators/zipball/master](http://github.com/fonini/custom-doctrine-validators/zipball/master)
 
   * Copy the files to the Validators dir. e.g: Doctrine/Validator
 
