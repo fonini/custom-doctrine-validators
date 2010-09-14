@@ -65,7 +65,7 @@ Validates a brazilian CPF, applying an appropriate algoritm for this. Passing an
 
            // Validate only formatted CPF's
 		   $this->hasColumn('cpf_formatted', 'string', 14, array(
-				'cpf' => array('formatted => true)
+				'cpf' => array('formatted' => true)
 			   )
 		   );
 	   }
