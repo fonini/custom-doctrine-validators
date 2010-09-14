@@ -11,7 +11,7 @@ A pack with some custom Doctrine validators, that helps with common validation t
 
   * Download the package
 
-        [http://github.com/fonini/custom-doctrine-validators/zipball/master](http://github.com/fonini/custom-doctrine-validators/zipball/master)
+        http://github.com/fonini/custom-doctrine-validators/zipball/master
 
   * Copy the files to the Validators dir. e.g: Doctrine/Validator
 
@@ -74,8 +74,8 @@ Validates a brazilian CPF, applying an appropriate algoritm for this. Passing an
 
 * Phone number
 
-Validates a brazilian phone number (including mobiles), with Anatel rules. e.g.: (54) 3342-0000. The regex used in this validator can be found her
-[Goncin's blog](http://goncin.wordpress.com/2010/08/30/validando-numeros-de-telefone-com-expressoes-regulares).
+Validates a brazilian phone number (including mobiles), with Anatel rules. e.g.: (54) 3342-0000. The regex used in this validator can be found here:
+[Goncin's blog](http://goncin.wordpress.com/2010/08/30/validando-numeros-de-telefone-com-expressoes-regulares)
     
     [php]
     // models/Customer.php
