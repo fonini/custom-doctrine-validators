@@ -51,25 +51,25 @@ Validates a brazilian CPF, applying an appropriate algoritm for this. Passing an
 
     class Customer extends BaseCustomer
     {
-       // ...
+        // ...
 
-	   public function setTableDefinition(){
-		   parent::setTableDefinition();
+        public function setTableDefinition(){
+            parent::setTableDefinition();
 
-		   // ...
-           // Validate in any format
-		   $this->hasColumn('cpf_in_any_format', 'string', 14, array(
-				'cpf' => true
-			   )
-		   );
+            // ...
+            // Validate in any format
+            $this->hasColumn('cpf_in_any_format', 'string', 14, array(
+                'cpf' => true
+                )
+            );
 
-           // Validate only formatted CPF's
-		   $this->hasColumn('cpf_formatted', 'string', 14, array(
-				'cpf' => array('formatted' => true)
-			   )
-		   );
-	   }
-   }
+            // Validate only formatted CPF's
+            $this->hasColumn('cpf_formatted', 'string', 14, array(
+                'cpf' => array('formatted' => true)
+                )
+            );
+        }
+    }
 
 
 * Phone number
@@ -82,19 +82,18 @@ Validates a brazilian phone number (including mobiles), with Anatel rules. e.g.:
 
     class Customer extends BaseCustomer
     {
-       // ...
+        // ...
 
-	   public function setTableDefinition(){
-		   parent::setTableDefinition();
+        public function setTableDefinition(){
+            parent::setTableDefinition();
 
-		   // ...
-           // Validate in any format
-		   $this->hasColumn('telefone', 'string', 9, array(
-				'telefone' => true
-			   )
-		   );
-	   }
-   }
+            // Validate in any format
+            $this->hasColumn('telefone', 'string', 9, array(
+                'telefone' => true
+                )
+            );
+        }
+    }
 
 
 * Brazilian states
@@ -107,18 +106,18 @@ i.e.: RS, SC, sp
 
     class Customer extends BaseCustomer
     {
-       // ...
+        // ...
 
-	   public function setTableDefinition(){
-		   parent::setTableDefinition();
+        public function setTableDefinition(){
+            parent::setTableDefinition();
 
-		   // ...
-		   $this->hasColumn('estado', 'string', 2, array(
-				'brstate' => true
-			   )
-		   );
-	   }
-   }
+            // ...
+            $this->hasColumn('estado', 'string', 2, array(
+                'brstate' => true
+                )
+            );
+        }
+    }
 
 
 * URL's
@@ -132,18 +131,18 @@ i.e.: http://www.fonini.net, ftp://10.1.1.1:21
 
     class Customer extends BaseCustomer
     {
-       // ...
+        // ...
 
-	   public function setTableDefinition(){
-		   parent::setTableDefinition();
+        public function setTableDefinition(){
+            parent::setTableDefinition();
 
-		   // ...
-		   $this->hasColumn('url', 'string', 2, array(
-				'url' => true
-			   )
-		   );
-	   }
-   }
+            // ...
+            $this->hasColumn('url', 'string', 2, array(
+                'url' => true
+                )
+            );
+        }
+    }
 
 
 ## Questions, bugs, feature requests? ##
