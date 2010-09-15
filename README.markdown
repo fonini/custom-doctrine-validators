@@ -27,19 +27,19 @@ Validates a brazilian CEP. e.g.: 99150-000, 99.150-000, 99150000
 
     class Customer extends BaseCustomer
     {
-       // ...
+        // ...
 
-	   public function setTableDefinition(){
-		   parent::setTableDefinition();
+        public function setTableDefinition(){
+            parent::setTableDefinition();
 
-		   // ...
+            // ...
 
-		   $this->hasColumn('cep', 'string', 9, array(
-				'cep' => true
-			   )
-		   );
-	   }
-   }
+            $this->hasColumn('cep', 'string', 9, array(
+                'cep' => true
+                )
+            );
+        }
+    }
 
 
 * CPF
@@ -143,6 +143,55 @@ i.e.: http://www.fonini.net, ftp://10.1.1.1:21
             );
         }
     }
+
+
+* Even numbers
+
+Validates if the value is an even number.
+i.e.: 2, 4, 10
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('number_of_wheels', 'integer', 2, array(
+                'even' => true
+                )
+            );
+        }
+    }
+
+
+* Odd numbers
+
+Validates if the value is an odd number.
+i.e.: 3, 5, 9
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('odd_number', 'integer', 2, array(
+                'odd' => true
+                )
+            );
+        }
+    }
+
 
 
 ## Questions, bugs, feature requests? ##
