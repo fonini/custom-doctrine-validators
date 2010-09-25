@@ -209,8 +209,32 @@ i.e.: ff0000, af4
             parent::setTableDefinition();
 
             // ...
-            $this->hasColumn('hexa_code', 'integer', 2, array(
+            $this->hasColumn('hexa_code', 'integer', 20, array(
                 'hexnumber' => true
+                )
+            );
+        }
+    }
+
+
+* Alpha-numeric numbers
+
+Validates if the value is an alpha-numeric number
+i.e.: jonnas, a45fdw
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('alpha_value', 'integer', 2, array(
+                'alphanumeric' => true
                 )
             );
         }
