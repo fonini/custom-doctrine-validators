@@ -89,7 +89,7 @@ Validates a brazilian phone number (including mobiles), with Anatel rules. e.g.:
 
             // Validate in any format
             $this->hasColumn('telefone', 'string', 9, array(
-                'telefone' => true
+                'phone' => true
                 )
             );
         }
@@ -187,6 +187,30 @@ i.e.: 3, 5, 9
             // ...
             $this->hasColumn('odd_number', 'integer', 2, array(
                 'odd' => true
+                )
+            );
+        }
+    }
+
+
+* Hexadecimal numbers
+
+Validates if the value is a hexadecimal number
+i.e.: ff0000, af4
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('hexa_code', 'integer', 2, array(
+                'hexnumber' => true
                 )
             );
         }

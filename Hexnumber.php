@@ -19,7 +19,7 @@
  */
 
 /**
- * Doctrine_Validator_Odd
+ * Doctrine_Validator_Hexnumber
  *
  * @package     Doctrine
  * @subpackage  Validator
@@ -28,10 +28,10 @@
  * @since       1.2.3
  * @author      Jonnas Fonini <contato@fonini.net>
  */
-class Doctrine_Validator_Odd extends Doctrine_Validator_Driver
+class Doctrine_Validator_Hexnumber extends Doctrine_Validator_Driver
 {
     /**
-     * checks if given value is an odd number
+     * checks if given value is a valid hexadecimal number
      *
      * @param mixed $value
      * @return boolean
@@ -41,7 +41,7 @@ class Doctrine_Validator_Odd extends Doctrine_Validator_Driver
         if (is_null($value)) {
             return true;
         }
-        if ($value % 2 == 0) {
+        if ( ! preg_match('/^[a-fA-F0-9]+$/', $value)) {
             return false;
         }
         return true;

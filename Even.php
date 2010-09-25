@@ -19,7 +19,7 @@
  */
 
 /**
- * Doctrine_Validator_Par
+ * Doctrine_Validator_Even
  *
  * @package     Doctrine
  * @subpackage  Validator
@@ -28,7 +28,7 @@
  * @since       1.2.3
  * @author      Jonnas Fonini <contato@fonini.net>
  */
-class Doctrine_Validator_Par extends Doctrine_Validator_Driver
+class Doctrine_Validator_Even extends Doctrine_Validator_Driver
 {
     /**
      * checks if given value is an even number

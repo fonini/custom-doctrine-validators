@@ -19,7 +19,7 @@
  */
 
 /**
- * Doctrine_Validator_Telefone
+ * Doctrine_Validator_Phone
  *
  * @package     Doctrine
  * @subpackage  Validator
@@ -28,11 +28,11 @@
  * @since       1.2.3
  * @author      Jonnas Fonini <contato@fonini.net>
  */
-class Doctrine_Validator_Telefone extends Doctrine_Validator_Driver
+class Doctrine_Validator_Phone extends Doctrine_Validator_Driver
 {
     /**
      * checks if given value is a valid brazilian phone number, with area code
-     * Thanks to Goncin's regex: http://goncin.wordpress.com/2010/08/30/validando-numeros-de-telefone-com-expressoes-regulares
+     * Thanks to Goncin for the regex: http://goncin.wordpress.com/2010/08/30/validando-numeros-de-telefone-com-expressoes-regulares
      *
      * @param mixed $value
      * @return boolean
