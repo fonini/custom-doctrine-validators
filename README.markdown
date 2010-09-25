@@ -209,7 +209,7 @@ i.e.: ff0000, af4
             parent::setTableDefinition();
 
             // ...
-            $this->hasColumn('hexa_code', 'integer', 20, array(
+            $this->hasColumn('hexa_code', 'string', 20, array(
                 'hexnumber' => true
                 )
             );
@@ -217,9 +217,9 @@ i.e.: ff0000, af4
     }
 
 
-* Alpha-numeric numbers
+* Alpha-numeric values
 
-Validates if the value is an alpha-numeric number
+Validates if the value is alpha-numeric
 i.e.: jonnas, a45fdw
     
     [php]
@@ -233,13 +233,36 @@ i.e.: jonnas, a45fdw
             parent::setTableDefinition();
 
             // ...
-            $this->hasColumn('alpha_value', 'integer', 2, array(
+            $this->hasColumn('alphanumeric_value', 'string', 50, array(
                 'alphanumeric' => true
                 )
             );
         }
     }
 
+
+* Brazilian money (Real)
+
+Validates if the value is a valid amount of brazilian money (Real)
+i.e.: 10,00, 50.400,65
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('price', 'string', 20, array(
+                'brmoney' => true
+                )
+            );
+        }
+    }
 
 
 ## Questions, bugs, feature requests? ##
