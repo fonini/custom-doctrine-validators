@@ -265,6 +265,29 @@ i.e.: 10,00, 50.400,65
     }
 
 
+* Prime numbers
+
+Validates if the value is a prime number.
+i.e.: 1, 2, 3, 5, 13
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('prime_value', 'integer', 5, array(
+                'primenumber' => true
+                )
+            );
+        }
+    }
+
 ## Questions, bugs, feature requests? ##
 
 Send an e-mail to: contato@fonini.net
