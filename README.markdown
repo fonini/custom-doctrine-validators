@@ -20,7 +20,8 @@ A pack with some custom Doctrine validators, that helps with common validation t
 
 * CEP
 
-Validates a brazilian CEP. e.g.: 99150-000, 99.150-000, 99150000
+Validates a brazilian CEP. 
+e.g.: 99150-000, 99.150-000, 99150000
     
     [php]
     // models/Customer.php
@@ -99,7 +100,7 @@ Validates a brazilian phone number (including mobiles), with Anatel rules. e.g.:
 * Brazilian states
 
 Validates if the string is an brazilian state. 
-i.e.: RS, SC, sp
+e.g.: RS, SC, sp
     
     [php]
     // models/Customer.php
@@ -124,7 +125,7 @@ i.e.: RS, SC, sp
 
 Validates if the string is an valid URL. The URL can be a domain name or a IP address. A port is optional. The following
 protocols are supported: http, https, ftp and ftps.
-i.e.: http://www.fonini.net, ftp://10.1.1.1:21
+e.g.: http://www.fonini.net, ftp://10.1.1.1:21
     
     [php]
     // models/Customer.php
@@ -148,7 +149,7 @@ i.e.: http://www.fonini.net, ftp://10.1.1.1:21
 * Even numbers
 
 Validates if the value is an even number.
-i.e.: 2, 4, 10
+e.g.: 2, 4, 10
     
     [php]
     // models/Customer.php
@@ -172,7 +173,7 @@ i.e.: 2, 4, 10
 * Odd numbers
 
 Validates if the value is an odd number.
-i.e.: 3, 5, 9
+e.g.: 3, 5, 9
     
     [php]
     // models/Customer.php
@@ -196,7 +197,7 @@ i.e.: 3, 5, 9
 * Hexadecimal numbers
 
 Validates if the value is a hexadecimal number
-i.e.: ff0000, af4
+e.g.: ff0000, af4
     
     [php]
     // models/Customer.php
@@ -220,7 +221,7 @@ i.e.: ff0000, af4
 * Alphanumeric values
 
 Validates if the value is alphanumeric
-i.e.: jonnas, a45fdw
+e.g.: jonnas, a45fdw
     
     [php]
     // models/Customer.php
@@ -244,7 +245,7 @@ i.e.: jonnas, a45fdw
 * Brazilian money (Real)
 
 Validates if the value is a valid amount of brazilian money (Real)
-i.e.: 10,00, 50.400,65
+e.g.: 10,00, 50.400,65
     
     [php]
     // models/Customer.php
@@ -268,7 +269,7 @@ i.e.: 10,00, 50.400,65
 * Prime numbers
 
 Validates if the value is a prime number.
-i.e.: 1, 2, 3, 5, 13
+e.g.: 1, 2, 3, 5, 13
     
     [php]
     // models/Customer.php
@@ -292,7 +293,7 @@ i.e.: 1, 2, 3, 5, 13
 * Float point numbers
 
 Validates if the value is a float point number
-i.e.: 10.0, 230.90, 10
+e.g.: 10.0, 230.90, 10
     
     [php]
     // models/Customer.php
@@ -316,7 +317,7 @@ i.e.: 10.0, 230.90, 10
 * Palindrome
 
 Validates if the value is a palindrome, a word that can be read the same way in either direction.
-i.e.: arara, ana
+e.g.: arara, ana
     
     [php]
     // models/Customer.php
@@ -340,7 +341,7 @@ i.e.: arara, ana
 * Dollar
 
 Validates if the value is a valid amount of dollars, with our without the sign.
-i.e.: arara, ana
+e.g.: $1,234,567.89, 1234567.89, $0.00
     
     [php]
     // models/Customer.php
