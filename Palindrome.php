@@ -19,7 +19,7 @@
  */
 
 /**
- * Doctrine_Validator_Brmoney
+ * Doctrine_Validator_Palindrome
  *
  * @package     Doctrine
  * @subpackage  Validator
@@ -28,12 +28,10 @@
  * @since       1.2.3
  * @author      Jonnas Fonini <contato@fonini.net>
  */
-class Doctrine_Validator_Brmoney extends Doctrine_Validator_Driver
+class Doctrine_Validator_Palindrome extends Doctrine_Validator_Driver
 {
     /**
-     * checks if given value is a valid amount of brazilian money (real)
-     *
-     * valid values: 10,00, 50.400,50
+     * checks if given value is a palindrome
      *
      * @param mixed $value
      * @return boolean
@@ -43,10 +41,10 @@ class Doctrine_Validator_Brmoney extends Doctrine_Validator_Driver
         if (is_null($value) || $value == '') {
             return true;
         }
-        if (! preg_match('/^([1-9]{1}[\d]{0,2}(\.[\d]{3})*(\,[\d]{0,2})?|[1-9]{1}[\d]{0,}(\,[\d]{0,2})?|0(\,[\d]{0,2})?|(\,[\d]{1,2})?)$/', $value)) {
-            return false;
-        }
-
-        return true;
+		if ($value === strrev($value)){
+			return true;
+		}
+        
+        return false;
     }
 }

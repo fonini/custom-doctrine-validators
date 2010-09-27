@@ -41,7 +41,7 @@ class Doctrine_Validator_Floatpoint extends Doctrine_Validator_Driver
         if (is_null($value) || $value == '') {
             return true;
         }
-        if (preg_match('/^([1-9]{1}[\d]{0,2}(\.[\d]{3})*(\,[\d]{0,2})?|[1-9]{1}[\d]{0,}(\,[\d]{0,2})?|0(\,[\d]{0,2})?|(\,[\d]{1,2})?)$/', $value)) {
+        if (preg_match('/[-+]?[0-9]*\.?[0-9]+/', $value)) {
             return true;
         }
 

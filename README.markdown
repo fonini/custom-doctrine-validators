@@ -313,6 +313,30 @@ i.e.: 10.0, 230.90, 10
     }
 
 
+* Palindrome
+
+Validates if the value is a palindrome, a word that can be read the same way in either direction.
+i.e.: arara, ana
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('word', 'string', 50, array(
+                'palindrome' => true
+                )
+            );
+        }
+    }
+
+
 ## Questions, bugs, feature requests? ##
 
 Send an e-mail to: contato@fonini.net
