@@ -217,9 +217,9 @@ i.e.: ff0000, af4
     }
 
 
-* Alpha-numeric values
+* Alphanumeric values
 
-Validates if the value is alpha-numeric
+Validates if the value is alphanumeric
 i.e.: jonnas, a45fdw
     
     [php]

@@ -31,7 +31,7 @@
 class Doctrine_Validator_Alphanumeric extends Doctrine_Validator_Driver
 {
     /**
-     * checks if given value is a valid alpha-numeric value
+     * checks if given value is a valid alphanumeric value
      *
      * valid values: jonnas, 666, j0nn45
      * invalid values: jonnas fonini, teste.
