@@ -337,6 +337,30 @@ i.e.: arara, ana
     }
 
 
+* Dollar
+
+Validates if the value is a valid amount of dollars, with our without the sign.
+i.e.: arara, ana
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('price', 'string', 50, array(
+                'dollar' => true
+                )
+            );
+        }
+    }
+
+
 ## Questions, bugs, feature requests? ##
 
 Send an e-mail to: contato@fonini.net
