@@ -19,7 +19,7 @@
  */
 
 /**
- * Doctrine_Validator_Alphanumeric
+ * Doctrine_Validator_Floatpoint
  *
  * @package     Doctrine
  * @subpackage  Validator
@@ -28,13 +28,10 @@
  * @since       1.2.3
  * @author      Jonnas Fonini <contato@fonini.net>
  */
-class Doctrine_Validator_Alphanumeric extends Doctrine_Validator_Driver
+class Doctrine_Validator_Floatpoint extends Doctrine_Validator_Driver
 {
     /**
-     * checks if given value is a valid alpha-numeric value
-     *
-     * valid values: jonnas, 666, j0nn45
-     * invalid values: jonnas fonini, teste.
+     * checks if given value is a valid float point number
      *
      * @param mixed $value
      * @return boolean
@@ -44,10 +41,10 @@ class Doctrine_Validator_Alphanumeric extends Doctrine_Validator_Driver
         if (is_null($value) || $value == '') {
             return true;
         }
-        if (preg_match('/[^0-9a-zA-Z]/i', $value)) {
-            return false;
+        if (preg_match('/^([1-9]{1}[\d]{0,2}(\.[\d]{3})*(\,[\d]{0,2})?|[1-9]{1}[\d]{0,}(\,[\d]{0,2})?|0(\,[\d]{0,2})?|(\,[\d]{1,2})?)$/', $value)) {
+            return true;
         }
 
-        return true;
+        return false;
     }
 }

@@ -288,6 +288,31 @@ i.e.: 1, 2, 3, 5, 13
         }
     }
 
+
+* Float point numbers
+
+Validates if the value is a float point number
+i.e.: 10.0, 230.90, 10
+    
+    [php]
+    // models/Customer.php
+
+    class Customer extends BaseCustomer
+    {
+        // ...
+
+        public function setTableDefinition(){
+            parent::setTableDefinition();
+
+            // ...
+            $this->hasColumn('float_value', 'float', array(
+                'floatpoint' => true
+                )
+            );
+        }
+    }
+
+
 ## Questions, bugs, feature requests? ##
 
 Send an e-mail to: contato@fonini.net
