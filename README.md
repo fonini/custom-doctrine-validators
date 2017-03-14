@@ -37,8 +37,7 @@ class Customer extends BaseCustomer
 
         $this->hasColumn('cep', 'string', 9, array(
             'cep' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -61,14 +60,12 @@ class Customer extends BaseCustomer
         // Validate in any format
         $this->hasColumn('cpf_in_any_format', 'string', 14, array(
             'cpf' => true
-            )
-        );
+        ));
 
         // Validate only formatted CPF's
         $this->hasColumn('cpf_formatted', 'string', 14, array(
             'cpf' => array('formatted' => true)
-            )
-        );
+        ));
     }
 }
 ````
@@ -91,8 +88,7 @@ class Customer extends BaseCustomer
         // Validate in any format
         $this->hasColumn('telefone', 'string', 9, array(
             'phone' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -115,8 +111,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('estado', 'string', 2, array(
             'brstate' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -140,8 +135,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('url', 'string', 2, array(
             'url' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -164,8 +158,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('number_of_wheels', 'integer', 2, array(
             'even' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -188,8 +181,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('odd_number', 'integer', 2, array(
             'odd' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -213,8 +205,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('hexa_code', 'string', 20, array(
             'hexnumber' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -237,8 +228,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('alphanumeric_value', 'string', 50, array(
             'alphanumeric' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -261,8 +251,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('price', 'string', 20, array(
             'brmoney' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -285,8 +274,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('prime_value', 'integer', 5, array(
             'primenumber' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -309,8 +297,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('float_value', 'float', array(
             'floatpoint' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -333,8 +320,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('word', 'string', 50, array(
             'palindrome' => true
-            )
-        );
+        ));
     }
 }
 ````
@@ -357,8 +343,7 @@ class Customer extends BaseCustomer
         // ...
         $this->hasColumn('price', 'string', 50, array(
             'dollar' => true
-            )
-        );
+        ));
     }
 }
 ````
