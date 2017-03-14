@@ -26,7 +26,7 @@
  * @license     http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link        www.doctrine-project.org
  * @since       1.2.3
- * @author      Jonnas Fonini <contato@fonini.net>
+ * @author      Jonnas Fonini <jonnasfonini@gmail.com>
  */
 class Doctrine_Validator_Palindrome extends Doctrine_Validator_Driver
 {
